@@ -29,4 +29,34 @@ class IndexController extends Controller
 
         return redirect('/display');
     }
+
+
+    public function update($id) {
+        $data = crud_app::find($id);
+        return view('update', ['crud_app'=>$data]);
+    }
+
+    public function new(Request $_request) {
+
+        $data = crud_app::find($_request->id);
+        
+        $name = $_request->input('name');
+        $comment = $_request->input('comment');
+
+        $data->name = $name;
+        $data->comment = $comment;
+
+        $data->save();
+
+        return redirect('/display');
+    }
+
+
+    public function delete($id) {
+        $data = crud_app::find($id);
+        $data->delete();
+        return redirect('/display');
+    }
+
+
 }

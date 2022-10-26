@@ -13,6 +13,9 @@
         <li>
             <h3> <?php echo 'Name:  '. $crud->name; ?> </h3>
             <p> <?php echo 'Comment:    '. $crud->comment; ?> </p>
+            
+            <a href="{{url('update/' . $crud->id)}}">Update Entry</a>
+            <a href="{{url('delete/' . $crud->id)}}">Delete Entry</a>
         </li>
         @endforeach
     </ul>

@@ -17,7 +17,7 @@
         <br>
 
         <label for="comment">Enter Your Comment: </label>
-        <input type="textarea" name="comment" placeholder="Comment" required>
+        <input type="text" name="comment" placeholder="Comment" required>
         <br>
 
         <input type="submit" value="Submit">

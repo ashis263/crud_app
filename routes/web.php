@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/display', [IndexController::class, 'display']);
 Route::post('/submit', [IndexController::class, 'submit']);
+
+Route::get('/update/{id}', [IndexController::class, 'update']);
+Route::post('/new', [IndexController::class, 'new']);
+
+Route::get('/delete/{id}', [IndexController::class, 'delete']);
